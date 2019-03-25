@@ -6,3 +6,18 @@
   <br>
   Manage your todos <a routerLink="/todos">here!</a>
 </div>
+
+
+<br>
+<br>
+<div class="container">
+  Invoke backend api
+  <button (click)="invokeBackendServiceWithParam()" class="btn btn-success"> here</button>
+</div>
+
+<br>
+<br>
+<div class="container" *ngIf="welcomeMessage">
+  <h2>Your customized welcome message</h2>
+  {{ welcomeMessage }}
+</div>
