@@ -11,12 +11,12 @@ import java.util.List;
 public class todoService {
 
     private static List<todo> todos = new ArrayList();
-    private static int idCounter = 0;
+    private static long idCounter = 0;
 
     static {
-        todos.add(new todo(idCounter++, "asd", false, new Date(), "username"));
-        todos.add(new todo(idCounter++, "asd2", false, new Date(), "username"));
-        todos.add(new todo(idCounter++, "asd3", false, new Date(), "username"));
+        todos.add(new todo(idCounter++, "asd1", false, new Date(), "zsofeeder"));
+        todos.add(new todo(idCounter++, "asd2", false, new Date(), "zsofeeder"));
+        todos.add(new todo(idCounter++, "asd3", false, new Date(), "zsofeeder"));
 
     }
 
@@ -42,7 +42,6 @@ public class todoService {
                 return todo;
             }
         }
-
         return null;
     }
 }

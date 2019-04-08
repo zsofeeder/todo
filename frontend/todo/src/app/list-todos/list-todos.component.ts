@@ -18,6 +18,8 @@ export class Todo {
 })
 export class ListTodosComponent implements OnInit {
 
+  message: string;
+
   todos: Todo[];
 
   // [
@@ -30,8 +32,20 @@ export class ListTodosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.retrieveAllTodos('asd').subscribe(
+    this.refreshTodos();
+  }
+
+  refreshTodos() {
+    this.service.retrieveAllTodos('zsofeeder').subscribe(
       response => this.todos = response);
   }
 
+  deleteTodo(id) {
+    this.service.deleteTodo('zsofeeder', id).subscribe(
+      response => {
+        this.message = 'Delete successful!';
+        this.refreshTodos();
+      }
+    );
+  }
 }

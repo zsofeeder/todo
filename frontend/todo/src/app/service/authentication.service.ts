@@ -9,7 +9,7 @@ export class AuthenticationService {
   }
 
   authenticate(username, password) {
-    if (username === 'hardcoded' && password === 'hardcoded') {
+    if (username === 'zsofeeder' && password === 'asd') {
       sessionStorage.setItem('authenticatedUser', username);
       return true;
     }

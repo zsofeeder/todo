@@ -9,7 +9,7 @@ import {AuthenticationService} from '../service/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = '';
+  username = 'zsofeeder';
   password = '';
   errorMessage = 'Invalid username or password!';
   invalidLogin = false;
